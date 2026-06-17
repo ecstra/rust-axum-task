@@ -1,0 +1,23 @@
+[package]
+name = "rust-axum-todo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+argon2 = "0.5.3"
+axum = "0.8.9"
+chrono = { version = "0.4.45", features = ["serde"] }
+dotenvy = "0.15.7"
+jsonwebtoken = { version = "10.4.0", features = ["rust_crypto"] }
+rand = "0.8.5"
+redis = { version = "1.2.3", features = ["aio", "tokio-comp"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+sqlx = { version = "0.8.6", features = ["sqlite", "runtime-tokio", "chrono"] }
+tokio = { version = "1.52.3", features = ["rt-multi-thread"] }
+tower-http = { version = "0.7.0", features = ["cors", "trace"] }
+tracing-subscriber = "0.3.23"
+uuid = { version = "1.23.3", features = ["v4", "serde"] }
+
+[dev-dependencies]
+reqwest = { version = "0.13.4", features = ["json"] }
